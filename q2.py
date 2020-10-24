@@ -46,6 +46,6 @@ for i in [0,1]:
 # print(num_days)
 diff = abs(num_days[0]-num_days[1])
 if diff<2:
-    print(diff,"day")
+    print("Date Difference:",diff,"day")
 else:
-    print(diff,"days")
+    print("Date Difference:",diff,"days")
