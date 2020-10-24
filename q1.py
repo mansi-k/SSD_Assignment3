@@ -11,7 +11,7 @@
 
 
 import json
-with open('q1json.json') as f:
+with open('org.json') as f:
     data = json.load(f)
 # print(data)
 
