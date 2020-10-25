@@ -45,7 +45,15 @@ for i in [0,1]:
     num_days.append(int(nd))
 # print(num_days)
 diff = abs(num_days[0]-num_days[1])
+
+output = ""
 if diff<2:
-    print("Date Difference:",diff,"day")
+    output = "Date Difference:"+str(diff)+" day"
+    print(output)
 else:
-    print("Date Difference:",diff,"days")
+    output = "Date Difference:"+str(diff)+" days"
+    print(output)
+
+f = open("output.txt", "w")
+f.write(output)
+f.close()

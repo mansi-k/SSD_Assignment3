@@ -21,7 +21,7 @@ with open('org.json') as f:
 
 # e1 = 220
 # e2 = 750
-e1,e2 = [int(x) for x in input().split()]
+e1,e2 = [x.strip() for x in input().split()]
 flat_emp = []
 l = 0
 e1l = -1
