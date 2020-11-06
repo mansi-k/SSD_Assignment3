@@ -39,8 +39,8 @@ if __name__=="__main__":
         break
     e2_date = e2_date[0]
     e2_slots = e2_slots[0]
-    # print(e2_date)
-    # print(e2_slots)
+#     print(e2_date)
+#     print(e2_slots)
 
     iphr = float(input().split()[0])
     # iphr = int(iphr)%10 + 0.60*(iphr-iphr//1)
@@ -83,7 +83,7 @@ if __name__=="__main__":
             free.append([prev,tm_end])
         free_slots.append(free)
         all_free_slots.append(allfree)
-    #     print(free)
+#         print(free)
     
     
     free = 0
