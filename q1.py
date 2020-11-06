@@ -1,79 +1,71 @@
-
-# coding: utf-8
-
-# In[58]:
-
-
-# import json
-
-
-# In[77]:
-
-
 import json
 with open('org.json') as f:
-    data = json.load(f)
+    orgdata = json.load(f)
 # print(data)
-
-
-# In[83]:
-
-
 # e1 = 220
 # e2 = 750
-e1,e2 = [x.strip() for x in input().split()]
-flat_emp = []
+empno_inp_list = [x.strip() for x in input().split()]
+if len(empno_inp_list) < 2:
+    print("Enter atleast 2 employees")
+    exit(0)
+
+flat_orgdata = [] # dict for all levels
 l = 0
-e1l = -1
-e2l = -1
-for level in data:
-    le_dict = {}
-    if e1l<0 or e2l<0 :
-        for emp in data[level]:
+emplev_inp_list = [-1 for x in empno_inp_list]
+
+for level in orgdata:
+    lev_dict = {} # dict per level
+    if -1 in emplev_inp_list: # if any input emp is still not parsed 
+        for emp in orgdata[level]:
+            if (not emp['name'].isdecimal()) or len(emp['name'])!=3 or int(emp['name'])<1 or int(emp['name'])>999:
+                print("Employee name",emp['name'],"is not a number in range 001-999")
+                exit(0)
             if 'parent' in emp:
-                le_dict[emp['name']] = emp['parent']
+                lev_dict[emp['name']] = emp['parent']
             else:
-                le_dict[emp['name']] = -1
-            if e1l<0 or e2l<0:
-                if emp['name']==e1:
-                    e1l = l
-                if emp['name']==e2:
-                    e2l = l
+                lev_dict[emp['name']] = -1
+            if -1 in emplev_inp_list:
+                for i in range(len(empno_inp_list)):
+                    if emplev_inp_list[i]==-1 and empno_inp_list[i]==emp['name']:
+                        emplev_inp_list[i] = l
             else:
-                break;
+                break
         l+=1
-        flat_emp.append(le_dict)
-# print(flat_emp)
-# print(e1l,e2l) 
+        flat_orgdata.append(lev_dict)
+    else:
+        break
 
+# print(flat_orgdata)
+# print(emplev_inp_list) 
 
-# In[85]:
+parents = {}
 
+for i in range(len(empno_inp_list)):
+    p = empno_inp_list[i]
+    l = emplev_inp_list[i]
+    filter_parents = {}
+    while l>0:
+        p = flat_orgdata[l][p]
+        l -= 1
+        if i==0:
+            filter_parents[p] = l
+        elif p in parents:
+            filter_parents[p] = l
+    parents = filter_parents
+#     print(filter_parents)
+# print(parents)
 
+maxlev = -1
+commonboss = ''
+for p in parents:
+    l = parents[p]
+    if l>maxlev:
+        maxlev = l
+        commonboss = p
 
-parent = {}
-# parent[e1] = e1l
-l=e1l
-p=e1
-
-while l>0:
-    p = flat_emp[l][p]
-    l-=1
-    parent[p] = l
-
-# print(parent)
-    
-l=e2l-1
-p=flat_emp[e2l][e2]
-
-while l>=0 and (p not in parent):
-    p = flat_emp[l][p]
-    l-=1
-    
-if l<0:
+if maxlev==-1:
     print("No common leader")
 else:
-    print(p)
-    print(p,"is",e1l-l,"levels above",e1)
-    print(p,"is",e2l-l,"levels above",e2)
-
+    print(commonboss)
+    for i in range(len(empno_inp_list)):
+        print(commonboss,"is",emplev_inp_list[i]-maxlev,"levels above",empno_inp_list[i])
