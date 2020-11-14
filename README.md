@@ -1,11 +1,13 @@
-# SSD Assignment-3a
+# SSD Assignment-3C
 
 GitHub Repo: https://github.com/mansi-k/SSD_A3p1
-branch: PartB
+branch: partC
 
 ### Question1
 #### Changes:
-Generalized for more than 2 employees as input
+Modularized the code using functions
+#### Cyclomatic Complexity:
+![alt text](https://github.com/mansi-k/SSD_A3p1/blob/partC/q1tc.png)
 #### Assumptions/Working:
 1. Input file (org.json) is assumed to be in proper json format (with double quotes for all keys and values) and with the same attributes as shown in the example except for the numbers (enclsosed in "") instead of A,B,C... for emp name.
 2. Input for 2 employee names is taken as 2 space separated strings. Eg: name1 name2.
@@ -24,7 +26,9 @@ Generalized for more than 2 employees as input
 
 ### Question2
 #### Changes:
-All the date formats mentioned were already included in PartA
+Modularized the code using functions
+#### Cyclomatic Complexity:
+![alt text](https://github.com/mansi-k/SSD_A3p1/blob/partC/q2tc.png)
 #### Assumptions/Working:
 1. It's assumed that the input file (date_calculator.txt) would be in the same format as given in example (Date1: and Date2: mentioned) and with only 2 dates.
 2. All date inputs are considers to be valid and only in the given formats.
@@ -36,12 +40,14 @@ All the date formats mentioned were already included in PartA
 
 ### Question3
 #### Changes:
-Generalized for more than 2 employees as input. Keep employee.txt files in q3_emp folder.
+Modularized the code using functions. Keep employee.txt files in q3_emp folder.
+#### Cyclomatic Complexity:
+![alt text](https://github.com/mansi-k/SSD_A3p1/blob/partC/q3tc.png)
 #### Assumptions/Working:
-1. The 2 input .txt files should have the same names (Employee1.txt & Employee2.txt) and their content should be in the given format only (except emp name in key).
-2. It's assumed that both the files would have only one date.
+1. All the .txt files to be given as input should be placed inside q3_emp folder.
+2. It's assumed that all the files would have only one date. If dates vary, then "No slot available" is printed.
 3. It's assumed that the input slots would be in the ascending order (as mentioned in moodle comments).
-4. The slot duration in hours is taken as input from the terminal in decimal format (Eg: 1 or 1.5)
+4. The slot duration in hours is taken as input from the terminal in decimal format (Eg: 1, 1.5, 2.25)
 5. The output is written in a file (output.txt) as well as printed on the terminal.
 6. Whether there exists a common slot or not, the list of all available slots for each employee is shown.
 7. It was mentioned in moodle that datetime library could be used for this question
