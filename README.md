@@ -1,6 +1,6 @@
 # SSD Assignment-3C
 
-GitHub Repo: https://github.com/mansi-k/SSD_A3p1
+GitHub Repo: https://github.com/mansi-k/SSD_A3p1/tree/partC 
 branch: partC
 
 ### Question1
