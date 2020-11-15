@@ -18,7 +18,7 @@ Modularized the code using functions
 7. If no common leader exists, then "No common leader" is printed.
 8. I/O format as mentioned in moodle comments:
 `Input:`
-<emp1> <emp2>
+\<emp1\> \<emp2\>
 `Output:`
 <xyz>
 <xyz> is <number> levels above <emp1>
