@@ -16,7 +16,7 @@ Modularized the code using functions
 5. It's assumed that no employee would be his own leader. 
 6. It's assumed that levels in the input are ordered and no level is skipped and that an employee has his leader in the immediate preceding level (level-1).
 7. If no common leader exists, then "No common leader" is printed.
-8. I/O format as mentioned in moodle comments:
+8. I/O format as mentioned in moodle comments:  
 `Input:`  
 \<emp1\> \<emp2\>  
 `Output:`  
