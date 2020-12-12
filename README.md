@@ -1,13 +1,10 @@
 # SSD Assignment-3C
 
-GitHub Repo: https://github.com/mansi-k/SSD_A3p1/tree/partC 
-branch: partC
-
 ### Question1
 #### Changes:
 Modularized the code using functions
 #### Cyclomatic Complexity:
-![alt text](https://github.com/mansi-k/SSD_A3p1/blob/partC/q1tc.png)
+![alt text](https://github.com/mansi-k/SSD_A3p1/blob/master/q1tc.png)
 #### Assumptions/Working:
 1. Input file (org.json) is assumed to be in proper json format (with double quotes for all keys and values) and with the same attributes as shown in the example except for the numbers (enclsosed in "") instead of A,B,C... for emp name.
 2. Input for 2 employee names is taken as 2 space separated strings. Eg: name1 name2.
@@ -28,7 +25,7 @@ Modularized the code using functions
 #### Changes:
 Modularized the code using functions
 #### Cyclomatic Complexity:
-![alt text](https://github.com/mansi-k/SSD_A3p1/blob/partC/q2tc.png)
+![alt text](https://github.com/mansi-k/SSD_A3p1/blob/master/q2tc.png)
 #### Assumptions/Working:
 1. It's assumed that the input file (date_calculator.txt) would be in the same format as given in example (Date1: and Date2: mentioned) and with only 2 dates.
 2. All date inputs are considers to be valid and only in the given formats.
@@ -42,7 +39,7 @@ Modularized the code using functions
 #### Changes:
 Modularized the code using functions. Keep employee.txt files in q3_emp folder.
 #### Cyclomatic Complexity:
-![alt text](https://github.com/mansi-k/SSD_A3p1/blob/partC/q3tc.png)
+![alt text](https://github.com/mansi-k/SSD_A3p1/blob/master/q3tc.png)
 #### Assumptions/Working:
 1. All the .txt files to be given as input should be placed inside q3_emp folder.
 2. It's assumed that all the files would have only one date. If dates vary, then "No slot available" is printed.
